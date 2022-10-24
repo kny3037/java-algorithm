@@ -1,4 +1,4 @@
-package java1024;
+package com.likelion.java1024;
 
 import java.util.Arrays;
 
