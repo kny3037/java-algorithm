@@ -14,18 +14,23 @@ public class ARacerWhoArray {
         HashMap<String, Integer> memo = new HashMap<>();
         for (int i = 0; i < participant.length; i++) {
             String key = participant[i];
-            memo.put(key, 1);
+            // 바로 put을 하지 않는다!
+            // 바로 put을 할 수도 없고, 숫자는 올리긴 해야함,,!
+            // 그래서 초기화를 해줘야 한다.
+            if (!memo.containsKey(key)){
+                memo.put(key,0); //0으로 초기화.
+            }
+            memo.put(key, memo.get(key)+1);
         }
         for (int i = 0; i < completion.length; i++) {
             String key = completion[i];  //value 1
-            memo.put(key,0);
+            memo.put(key, memo.get(key)-1);
         }
         for(String key : memo.keySet()){
             if(memo.get(key) == 1){
                 return key;
             }
         }
-
         return answer;
     }
 
