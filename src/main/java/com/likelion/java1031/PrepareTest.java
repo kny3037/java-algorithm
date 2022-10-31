@@ -39,12 +39,9 @@ public class PrepareTest {
             arr.add(3);
         }
 
-        //int형으로 변환
-
-
-
-
-        return new int[0];
+        //list를 int형으로 변환
+        int[] answer = arr.stream().mapToInt(Integer::intValue).toArray();
+        return answer;
     }
 
     public static void main(String[] args) {
