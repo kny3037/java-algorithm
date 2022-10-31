@@ -29,6 +29,7 @@ public class PrepareTest {
         maxScore = Math.max(score[0], score[1]);
         maxScore = Math.max(maxScore, score[2]);
 
+        //max와 같으면 add
         List<Integer> arr = new ArrayList<>();
         if (maxScore == score[0]){
             arr.add(1);
@@ -37,6 +38,10 @@ public class PrepareTest {
         }if (maxScore == score[2]) {
             arr.add(3);
         }
+
+        //int형으로 변환
+
+
 
 
         return new int[0];
