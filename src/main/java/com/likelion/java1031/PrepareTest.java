@@ -32,9 +32,9 @@ public class PrepareTest {
         List<Integer> arr = new ArrayList<>();
         if (maxScore == score[0]){
             arr.add(1);
-        } else if (maxScore == score[1]) {
+        }if (maxScore == score[1]) {
             arr.add(2);
-        } else if (maxScore == score[2]) {
+        }if (maxScore == score[2]) {
             arr.add(3);
         }
 
