@@ -13,6 +13,14 @@ public class PrepareTest {
         int[] third = {3,3,1,1,2,2,4,4,5,5}; // 10개씩 반복
         int[] score = {0,0,0}; // 각 수포자들의 점수
 
+        for (int i = 0; i < answers.length; i++) {
+            if (answers[i] == first[i%5]) score[0]++;
+            if (answers[i] == first[i%8]) score[1]++;
+            if (answers[i] == first[i%10]) score[2]++;
+        }
+
+
+
         int firstStudentAnswerCnt = 0;
         System.out.println(firstStudentAnswerCnt);
 
