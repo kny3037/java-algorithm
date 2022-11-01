@@ -21,6 +21,7 @@ public class TemplateCallback_Prime {
         return true;
     }
 
+   // 익명 내부클래스 사용
     public boolean compare(int num, StatementStrategy stmt){
         for (int i = 2; stmt.compare(i, num); i++) {
             if ((num % i) == 0){
@@ -32,8 +33,17 @@ public class TemplateCallback_Prime {
 
     public static void main(String[] args) {
         TemplateCallback_Prime tcp = new TemplateCallback_Prime();
-        boolean r = tcp.isPrime(17);
-        System.out.println(r);
+//        boolean r = tcp.compare(17, new StatementStrategy() {
+//            @Override
+//            public boolean compare(int a, int b) {
+//                return a * a < b;
+//            }
+//        });
+
+        // 위의 코드는 가독성이 떨어짐. 그래서 아래처럼 람다를 적용해서 작성 가능
+        System.out.println(tcp.compare(13,(a,b)->a<b));
+        System.out.println(tcp.compare(17,(a,b)->a<b));
+        System.out.println(tcp.compare(21,(a,b)->a<b));
     }
 
 }
