@@ -1,5 +1,9 @@
 package com.likelion.java1101;
 
+interface StatementStrategy{
+    boolean compare(int a, int b);
+}
+
 public class TemplateCallback_Prime {
     //Template Callback적용
 
@@ -10,6 +14,15 @@ public class TemplateCallback_Prime {
 
     public boolean isPrime(int num){
         for (int i = 2; somOperation(i, num); i++) {
+            if ((num % i) == 0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean compare(int num, StatementStrategy stmt){
+        for (int i = 2; stmt.compare(i, num); i++) {
             if ((num % i) == 0){
                 return false;
             }
