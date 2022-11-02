@@ -15,10 +15,13 @@ public class RemoveMultipleOf {
         }
         //2의 배수 지우기
         for (int i = 0; i < list.size(); i++) {
-           if (list.get(i)%2 == 0){
+           if (list.get(i)%2 == 0 && list.get(i) > 2){
               list.remove(i);
            }
         }
+        System.out.println(list);
+        System.out.println(list.size());
+
         //원소 출력해보기
         for(int data : list){
             System.out.println(data);
