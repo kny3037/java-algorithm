@@ -10,7 +10,7 @@ public class RemoveMultipleOf {
         //List만들기
         List<Integer> list = new ArrayList<>();
 
-        for (int i = 2; i < n; i++) {
+        for (int i = 2; i <= n; i++) {
             list.add(i);
         }
         //2의 배수 지우기
