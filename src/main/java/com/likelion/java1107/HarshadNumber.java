@@ -11,7 +11,15 @@ public class HarshadNumber {
             num /= 10;
         }
 
+        if(sum==0){
+            return true;
+        }else {
+            return false;
+        }
+    }
 
-        return true;
+    public static void main(String[] args) {
+        HarshadNumber hn = new HarshadNumber();
+        hn.solution(687);
     }
 }
