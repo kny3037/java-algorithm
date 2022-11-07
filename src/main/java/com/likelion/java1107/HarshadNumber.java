@@ -11,7 +11,7 @@ public class HarshadNumber {
             num /= 10;
         }
 
-        if(sum==0){
+        if(x%sum==0){ //sum==0으로 썼다가 오류나서 x%sum==0으로 수정
             return true;
         }else {
             return false;
