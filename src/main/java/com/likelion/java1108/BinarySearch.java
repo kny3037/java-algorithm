@@ -11,7 +11,7 @@ public class BinarySearch {
         //중간 값 찾기
         int startIdx = 0;
         int endIdx = nums.length - 1;
-        while (true) {
+        while (startIdx<=endIdx) {
             int midIdx = endIdx / 2;
             int midValue = nums[midIdx];
 
