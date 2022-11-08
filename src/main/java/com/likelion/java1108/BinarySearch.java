@@ -12,7 +12,7 @@ public class BinarySearch {
         int startIdx = 0;
         int endIdx = nums.length - 1;
         while (startIdx<=endIdx) {
-            int midIdx = endIdx / 2;
+            int midIdx = (startIdx + endIdx) / 2;
             int midValue = nums[midIdx];
 
             //인덱스 시작점, 끝점 옮기기
