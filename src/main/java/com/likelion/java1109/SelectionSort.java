@@ -2,12 +2,15 @@ package com.likelion.java1109;
 
 import java.util.Arrays;
 
+interface  StatementStrategy{ // 인터페이스로 내림차순 적용
+    boolean apply(int a, int b);
+}
 public class SelectionSort {
-        public int[] SelSort(int[] arr) {
+        public int[] SelSort(int[] arr, StatementStrategy stmt) {
             for (int i = 0; i < arr.length - 1; i++) {
                 int minIdx = i;
                 for (int j = i + 1; j < arr.length; j++) {
-                    if (arr[j] < arr[minIdx]) {
+                    if (stmt.apply(arr[j], arr[minIdx])) {
                         minIdx = j;
                     }
                 }
@@ -18,11 +21,30 @@ public class SelectionSort {
             return arr;
         }
 
+    public int[] SelSortDesc(int[] arr) {  // 복사해서 > 만 변경해서 내림차순 적용
+        for (int i = 0; i < arr.length - 1; i++) {
+            int maxIdx = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] > arr[maxIdx]) {
+                    maxIdx = j;
+                }
+            }
+            int temp = arr[i];
+            arr[i] = arr[maxIdx];
+            arr[maxIdx] = temp;
+        }
+        return arr;
+    }
+
     public static void main(String[] args) {
         int[] arr = new int[]{2, 7, 4, 9, 10, 223, 111, 23, 3, 39};
 
         SelectionSort selectionSort = new SelectionSort();
-        System.out.println(Arrays.toString(selectionSort.SelSort(arr)));
+        selectionSort.SelSort(arr, (a,b) -> a < b);
+        selectionSort.SelSort(arr, (a,b) -> a > b);
+
+        System.out.println(Arrays.toString(selectionSort.SelSortDesc(arr)));
+
     }
 
 
