@@ -1,9 +1,10 @@
 package com.likelion.java1110;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class HateSameNumberWithOutStack {
+public class HateSameNumber {
     public int[] solution(int []arr) {
         int[] answer = {};
         List<Integer> answerList = new ArrayList<>();
@@ -22,7 +23,9 @@ public class HateSameNumberWithOutStack {
         return answer;
     }
     public static void main(String[] args) {
-        HateSameNumberWithOutStack hs = new HateSameNumberWithOutStack();
+        int[] arr = new int[]{1,1,3,3,0,1,1};
+        HateSameNumber hs = new HateSameNumber();
+        System.out.println(Arrays.toString(hs.solution(arr)));
 
     }
 }
