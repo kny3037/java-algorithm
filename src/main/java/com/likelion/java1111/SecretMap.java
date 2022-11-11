@@ -25,22 +25,14 @@ public class SecretMap {
     }
 
 
-    String solution(int n, int[] arr1, int[] arr2) {
-        String answer = "";
-        String[] sArr1 = new String[n];
-        String[] sArr2 = new String[n];
+    String[] solution(int n, int[] arr1, int[] arr2) {
+        var answer = new String[n];
         for (int i = 0; i < n; i++) {
-            // arr1
-            for (int j = 0; j < n; j++) {
-                String binStr1 = getBinaryString(arr1[i]);
-                String binStr2 = getBinaryString(arr2[i]);
-                sArr1[i] = "0".repeat(n - binStr1.length()) + binStr1;
-                sArr2[i] = "0".repeat(n - binStr2.length()) + getBinaryString(arr2[i]);
-            }
+            answer[i] = Integer.toBinaryString(arr1[i] | arr2[i])
+                    .replace("1","#").replace("0", " ");
+            // 자릿수 맞춰주는 연산
+            answer[i] = " ".repeat(n - answer[i].length()) + answer[i];
         }
-        System.out.println(Arrays.toString(sArr1));
-        System.out.println(Arrays.toString(sArr2));
-
         return answer;
     }
     public static void main(String[] args) {
