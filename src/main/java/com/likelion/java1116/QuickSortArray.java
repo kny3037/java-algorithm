@@ -1,14 +1,12 @@
 package com.likelion.java1116;
 
-import com.likelion.java1115.QuickSort;
-
 import java.util.Arrays;
 
 public class QuickSortArray {
-    public int[] sort(int []arr, int startIdx, int endIdx){
-        int pivot = arr[arr.length / 2];
-        int leftIdx = 0;
-        int rightIdx = arr.length - 1;
+    public int[] sort(int[]arr, int startIdx, int endIdx){
+        int leftIdx = startIdx;
+        int rightIdx = endIdx;
+        int pivot = arr[(startIdx + endIdx) / 2];
 
         //--------------여기 아랫줄이 반복됨.----------------
         //언제까지 반복되는지? leftIdx == rightIdx일 때도 아래 로직이 반복됨
@@ -33,14 +31,16 @@ public class QuickSortArray {
         System.out.printf("leftIdx : %d, rightIdx : %d", leftIdx, rightIdx);
         System.out.println(Arrays.toString(arr));
 
+        if(startIdx < rightIdx)sort(arr, startIdx, rightIdx);
+        if(leftIdx < endIdx) sort(arr, leftIdx, endIdx);
+
         return arr;
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{20,18,5,19,40,50,5,25};
-        QuickSort qs = new QuickSort();
-
-
-
+        var arr = new int[]{20,18,5,19,40,50,5,25};
+        QuickSortArray qsa = new QuickSortArray();
+        var r = qsa.sort(arr,0,arr.length-1);
+        System.out.println(Arrays.toString(r));
     }
 }
