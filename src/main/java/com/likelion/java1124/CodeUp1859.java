@@ -6,10 +6,10 @@ import java.io.InputStreamReader;
 
 public class CodeUp1859 {
 
-    public static void printStar(int n){
+    public static void star(int n){
         if (n == 0) return;
-        printStar(n-1);
-        System.out.printf(getStar(n));
+        star(n-1);
+        System.out.print(getStar(n));
         System.out.println("");
     }
     public static String getStar(int n){
@@ -20,6 +20,6 @@ public class CodeUp1859 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(bf.readLine());
-        printStar(n);
+        star(n);
     }
 }
