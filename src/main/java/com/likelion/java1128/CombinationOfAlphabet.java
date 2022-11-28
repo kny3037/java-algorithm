@@ -14,8 +14,5 @@ public class CombinationOfAlphabet {
                 System.out.println(i + "" + j);
             }
         }
-
-
-
     }
 }
