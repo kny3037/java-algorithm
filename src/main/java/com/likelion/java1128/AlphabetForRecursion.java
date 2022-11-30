@@ -25,8 +25,10 @@ public class AlphabetForRecursion {
 
     public static final String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     public static void printAlphabet4(String prefix, int depth){
-        if (prefix.length() > depth) return;
-        System.out.println(prefix);
+        if (prefix.length() > depth){
+            System.out.println(prefix);
+            return;
+        }
 
         for (int i = 0; i < chars.length(); i++) {
             printAlphabet4(prefix + chars.charAt(i), depth);
