@@ -2,7 +2,6 @@ package com.likelion.java1115;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Queue;
 
 public class QuickSort {
 
@@ -15,6 +14,9 @@ public class QuickSort {
     }
 
     public List<Integer>sort(List<Integer> arr){
+
+        if(arr.size() <= 1) return arr;
+
         //1. 기준 값 뽑는 로직 구현
         int pivot = arr.get(arr.size()/2);  // 5
         System.out.println(pivot);
@@ -31,7 +33,7 @@ public class QuickSort {
         System.out.println(left); //
         System.out.println(right); // 20, 18, 19, 25, 40, 50
         // list를 합치는 연산
-        return merge(sort(left), sort(mid), sort(right));
+        return merge(sort(left), mid, sort(right));
     }
 
     public static void main(String[] args) {
@@ -43,7 +45,7 @@ public class QuickSort {
         }
 
         QuickSort qs = new QuickSort();
-        qs.sort(arr);
+        qs.sort(al);
 
     }
 }
