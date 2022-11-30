@@ -1,10 +1,9 @@
 package com.likelion;
 
+import com.likelion.java1019.Stack01;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class Stack01Test {
 

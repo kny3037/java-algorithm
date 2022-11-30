@@ -1,11 +1,11 @@
 package com.likelion;
 
+import com.likelion.java1019.Stack02;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.EmptyStackException;
-import java.util.Stack;
 
 import static org.junit.jupiter.api.Assertions.*;
 
