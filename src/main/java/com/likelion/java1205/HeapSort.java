@@ -9,7 +9,6 @@ public class HeapSort {
         int temp = arr[1];
         arr[1] = arr[3];
         arr[3] = temp;
-        System.out.println(Arrays.toString(arr));
 
         temp = arr[0];
         arr[0] = arr[1];
