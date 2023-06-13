@@ -1,4 +1,4 @@
-package com.likelion.baekjoon;
+package com.likelion.baekjoon.level1;
 
 public class B10171 {
     public static void main(String[] args) {

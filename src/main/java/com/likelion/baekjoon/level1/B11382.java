@@ -1,4 +1,4 @@
-package com.likelion.baekjoon;
+package com.likelion.baekjoon.level1;
 
 import java.util.Scanner;
 

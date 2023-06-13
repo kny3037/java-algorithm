@@ -1,8 +1,8 @@
-package com.likelion.baekjoon;
+package com.likelion.baekjoon.level1;
 
 import java.util.Scanner;
 
-public class B10998 {
+public class B1000 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -12,7 +12,6 @@ public class B10998 {
 
         sc.close();
 
-        System.out.println(A*B);
-
+        System.out.println(A + B);
     }
 }
