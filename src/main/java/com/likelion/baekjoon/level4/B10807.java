@@ -6,7 +6,7 @@ public class B10807 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int count = 0;  //v와 일치할 때 개 수를 올리는 변수
+        int count = 0;  //v와 일치할 때 개 수를 올리는 변수.
         int N = sc.nextInt();
         int[]arr = new int[N];  // 배열 생성 후 길이는 N 만큼으로
 
